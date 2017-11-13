@@ -24,7 +24,7 @@ module.exports = {
     }
 };
 ```
-Window's user rename the ****truffle.js file to **truffle-config.js**
+Window's user rename the **truffle.js** file to **truffle-config.js**
 
 # How to setup
 
@@ -32,22 +32,17 @@ Window's user rename the ****truffle.js file to **truffle-config.js**
 
 **Open terminal and run** 
 
-1.Install Truffle globally
+1. Install Truffle globally
 
  ``npm install -g truffle``  (this will install truffle on you system)
 
-2.Create a directory for project
+2. Clone the project using ``git clone https://github.com/sany2k8/ethshop.git``
 
- ``mkdir ethshop`` (you can choose any name as you wish instead of **ethshop**)
+3. Install the dependencies from package.json file ``npm install`` 
 
-3.Download the box. This also takes care of installing the necessary dependencies.
+4. Now, you have **2** choices whether you can use **Truffle develop** or run **TestRpc**
 
- ``cd ethshop`` (go to project folder)
- ``truffle unbox pet-shop`` (download the project from [http://truffleframework.com/boxes])
-
-4.Here you have **2** choices whether you can use **Truffle develop** or run **TestRpc**
-
-A.**Using Truffle develop**
+A. **Using Truffle develop**
 
  Run the development console. `truffle develop`
 
@@ -55,7 +50,7 @@ A.**Using Truffle develop**
  
  Migrate the smart contacts. ``migrate``
 
-B.**Using TestRpc**
+B. **Using TestRpc**
 
  Install ``testrpc``, using ``npm install -g ethereumjs-testrpc`` [https://github.com/ethereumjs/testrpc]
 
@@ -63,7 +58,7 @@ B.**Using TestRpc**
 
  Migrate the smart contacts ``migrate``
 
-5.Run the **liteserver** development server (outside the development console) for front-end hot reloading.
+5. Run the **liteserver** development server (outside the development console) for front-end hot reloading.
 
  Run the DAPP : ``npm run dev``
 
