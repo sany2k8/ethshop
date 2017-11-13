@@ -40,24 +40,24 @@ Install **NodeJS** (includes **NPM** 5.5.1) [https://nodejs.org/en/download/]
 
 4. Now, you have **2** choices whether you can use **Truffle develop** or run **TestRpc**
 
- A. **Using Truffle develop**
+   A. **Using Truffle develop**
 
- Run the development console. `truffle develop`
+    - Run the development console. `truffle develop`
 
- Compile the smart contracts. ``compile``
+    - Compile the smart contracts. ``compile``
  
- Migrate the smart contacts. ``migrate``
+    - Migrate the smart contacts. ``migrate``
 
- B. **Using TestRpc**
+   B. **Using TestRpc**
 
- Install ``testrpc``, using ``npm install -g ethereumjs-testrpc`` [https://github.com/ethereumjs/testrpc]
+    - Install ``testrpc``, using ``npm install -g ethereumjs-testrpc`` [https://github.com/ethereumjs/testrpc]
 
- Run the testrpc using ``testrpc``
+    - Run the testrpc using ``testrpc``
 
- Migrate the smart contacts ``migrate``
+    - Migrate the smart contacts ``migrate``
 
 5. Run the **liteserver** development server (outside the development console) for front-end hot reloading.
 
- Run the DAPP : ``npm run dev``
+    - Run the DAPP : ``npm run dev``
 
 The DAPP will serve the front-end on [http://localhost:3000]
