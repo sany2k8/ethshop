@@ -11,7 +11,7 @@ This tutorial is meant for those with a basic knowledge of Ethereum and smart co
 - Creating a user interface to interact with the smart contract.
 - Interacting with the dapp in a browser.
 
-# Default config for truffle.js(windows user rename it to truffle-config.js)
+### Default config for truffle.js
 
 ``
 module.exports = {
@@ -24,6 +24,7 @@ module.exports = {
     }
 };
 ``
+Window's user rename the truffle.js file to truffle-config.js
 
 # How to setup
 
@@ -31,20 +32,20 @@ module.exports = {
 
 **Open terminal and run** 
 
-1. Install Truffle globally
+1.Install Truffle globally
 - ``npm install -g truffle``  (this will install truffle on you system)
 
-2. Create a directory for project
+2.Create a directory for project
 - ``mkdir ethshop`` (you can choose any name as you wish instead of **ethshop**)
 
-3. Download the box. This also takes care of installing the necessary dependencies.
+3.Download the box. This also takes care of installing the necessary dependencies.
 
 - ``cd ethshop`` (go to project folder)
 - ``truffle unbox pet-shop`` (download the project from [http://truffleframework.com/boxes])
 
-4. Here you have **2** choices whether you can use **Truffle develop** or run **TestRpc**
+4.Here you have **2** choices whether you can use **Truffle develop** or run **TestRpc**
 
-A. Using **Truffle develop**
+A.**Using Truffle develop**
 
 - Run the development console. `truffle develop`
 
@@ -52,7 +53,7 @@ A. Using **Truffle develop**
  
 - Migrate the smart contacts. ``migrate``
 
-B. Using **TestRpc**
+B.**Using TestRpc**
 
 - Install ``testrpc``, using ``npm install -g ethereumjs-testrpc`` [https://github.com/ethereumjs/testrpc]
 
@@ -60,8 +61,8 @@ B. Using **TestRpc**
 
 - Migrate the smart contacts ``migrate``
 
-5. Run the **liteserver** development server (outside the development console) for front-end hot reloading.
+5.Run the **liteserver** development server (outside the development console) for front-end hot reloading.
 
-``npm run dev``
+Run the DAPP : ``npm run dev``
 
 The DAPP will serve the front-end on [http://localhost:3000]
