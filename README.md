@@ -28,13 +28,11 @@ Window's user rename the **truffle.js** file to **truffle-config.js**
 
 # How to setup
 
-- Install **NodeJS** (includes **NPM** 5.5.1) [https://nodejs.org/en/download/]
+Install **NodeJS** (includes **NPM** 5.5.1) [https://nodejs.org/en/download/]
 
 **Open terminal and run** 
 
-1. Install Truffle globally
-
- ``npm install -g truffle``  (this will install truffle on you system)
+1. Install Truffle globally ``npm install -g truffle``
 
 2. Clone the project using ``git clone https://github.com/sany2k8/ethshop.git``
 
@@ -42,7 +40,7 @@ Window's user rename the **truffle.js** file to **truffle-config.js**
 
 4. Now, you have **2** choices whether you can use **Truffle develop** or run **TestRpc**
 
-A. **Using Truffle develop**
+ A. **Using Truffle develop**
 
  Run the development console. `truffle develop`
 
@@ -50,7 +48,7 @@ A. **Using Truffle develop**
  
  Migrate the smart contacts. ``migrate``
 
-B. **Using TestRpc**
+ B. **Using TestRpc**
 
  Install ``testrpc``, using ``npm install -g ethereumjs-testrpc`` [https://github.com/ethereumjs/testrpc]
 
