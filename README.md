@@ -92,13 +92,13 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
     
 # Geth:
 
-        - Create a directory anywhere on your system using e.g ``mkdir geth``
+   - Create a directory anywhere on your system using e.g ``mkdir geth``
  
-        - Change directory ``cd geth``
+   - Change directory ``cd geth``
  
-        - Make data directory ``mkdir datadir``
+   - Make data directory ``mkdir datadir``
  
-        - Create **genesis.json** file with example configuration
+   - Create **genesis.json** file with example configuration
  
  ```
     {
@@ -151,17 +151,17 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
 
 ## Example Commands:
 
-personal.newAccount("123456789")
+ personal.newAccount("123456789")
 
-personal.newAccount("987654321")
+ personal.newAccount("987654321")
 
-personal.listAccounts
+ personal.listAccounts
 
-miner.start(1)
+ miner.start(1)
 
-eth.mining
+ eth.mining
 
-personal.unlockAccount(eth.accounts[0], "123456789", 86400)    
+ personal.unlockAccount(eth.accounts[0], "123456789", 86400)    
     
 
 5. Run the **liteserver** development server (outside the development console) for front-end hot reloading.
