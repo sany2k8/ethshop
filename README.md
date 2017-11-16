@@ -169,3 +169,13 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
     - Run the DAPP : ``npm run dev``
 
 The DAPP will serve the front-end on http://localhost:3000
+
+# MetaMask
+
+In order to participate safely you need to connect to the ethereum network. The fastest way to connect is through Chrome and MetaMask as described below.
+
+https://www.dcorp.it/chrome_and_metamask
+
+https://www.cryptocompare.com/wallets/guides/how-to-use-metamask/
+
+
