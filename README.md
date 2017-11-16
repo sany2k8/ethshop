@@ -38,8 +38,8 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
 
 3. Install the dependencies from package.json file ``npm install`` 
 
-4. Now, you have **3** choices whether you can use **Truffle develop** or run **TestRpc**
-
+4. Now, you have **3** choices whether you can use **Truffle develop** , **TestRpc** or **Geth**
+   
    A. **Using Truffle develop**
 
     - Run the development console. `truffle develop`
@@ -48,7 +48,7 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
  
     - Migrate the smart contacts. ``migrate``
 
-   B. **Using TestRpc** (That has build-in HD Wallet)
+   B. **Using TestRpc** (That has built-in HD Wallet)
 
     - Install ``testrpc``, using ``npm install -g ethereumjs-testrpc`` https://github.com/ethereumjs/testrpc
 
@@ -98,7 +98,7 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
  
    - Make data directory ``mkdir datadir``
  
-   - Create **genesis.json** file with example configuration
+   - Create **genesis.json** file with the below example configuration
  
  ```
     {
