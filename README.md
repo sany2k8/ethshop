@@ -172,7 +172,7 @@ The DAPP will serve the front-end on http://localhost:3000
 
 # MetaMask
 
-In order to participate safely you need to connect to the ethereum network. The fastest way to connect is through Chrome and MetaMask as described below.
+MetaMask is a bridge that allows you to visit the distributed web of tomorrow in your browser today. It allows you to run Ethereum dApps right in your browse. The fastest way to connect is through Chrome and MetaMask as described below.
 
 https://www.dcorp.it/chrome_and_metamask
 
