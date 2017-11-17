@@ -98,7 +98,7 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
  
    - Make data directory ``mkdir datadir``
  
-   - Create **genesis.json** file with the below example configuration
+   - Create **genesis.json** file using ``touch genesis.json``with the below example configuration
  
  ```
     {
