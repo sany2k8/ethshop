@@ -137,15 +137,15 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
 
  ```
     
-## Init Geth:
+## Initialize Geth:
 
 ``geth --datadir=./datadir init genesis.json``
 
-## Start Geth:
+## Start Geth RPC:
 
 ``geth --port 3500 --networkid 42 --nodiscover --datadir="datadir" --rpc --rpcport 8545 --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,net,personal,web3"``
 
-## Attach:
+## Attach to geth cosole:
 
 ``geth attach ipc:\\.\pipe\geth.ipc`` **Change it as per your ipc path, here I just used mine**
 
@@ -162,7 +162,9 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
  eth.mining
 
  personal.unlockAccount(eth.accounts[0], "123456789", 86400)    
-    
+ 
+ eth.getBalance(eth.accounts[0]);
+
 
 5. Run the **liteserver** development server (outside the development console) for front-end hot reloading.
 
