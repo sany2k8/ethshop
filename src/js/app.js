@@ -8,8 +8,6 @@ App = {
             var petTemplate = $('#petTemplate');
             petsRow.empty(); //empty the main products
             if(typeof filter!== undefined && filter !== ""){
-
-
                 //full match by product name
                 /*data = data.filter(function (i,n){
                     return i.name === filter;
