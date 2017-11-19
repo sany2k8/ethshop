@@ -38,8 +38,8 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
 
 3. Install the dependencies from package.json file ``npm install`` 
 
-4. Now, you have **3** choices whether you can use **Truffle develop** or run **TestRpc**
-
+4. Now, you have **3** choices whether you can use **Truffle develop** , **TestRpc** or **Geth**
+   
    A. **Using Truffle develop**
 
     - Run the development console. `truffle develop`
@@ -48,7 +48,7 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
  
     - Migrate the smart contacts. ``migrate``
 
-   B. **Using TestRpc** (That has build-in HD Wallet)
+   B. **Using TestRpc** (That has built-in HD Wallet)
 
     - Install ``testrpc``, using ``npm install -g ethereumjs-testrpc`` https://github.com/ethereumjs/testrpc
 
@@ -98,7 +98,7 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
  
    - Make data directory ``mkdir datadir``
  
-   - Create **genesis.json** file with example configuration
+   - Create **genesis.json** file using ``touch genesis.json``with the below example configuration
  
  ```
     {
@@ -137,15 +137,15 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
 
  ```
     
-## Init Geth:
+## Initialize Geth:
 
 ``geth --datadir=./datadir init genesis.json``
 
-## Start Geth:
+## Start Geth RPC:
 
 ``geth --port 3500 --networkid 42 --nodiscover --datadir="datadir" --rpc --rpcport 8545 --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcapi "eth,net,personal,web3"``
 
-## Attach:
+## Attach to geth cosole:
 
 ``geth attach ipc:\\.\pipe\geth.ipc`` **Change it as per your ipc path, here I just used mine**
 
@@ -162,10 +162,22 @@ Install **NodeJS** (includes **NPM** 5.5.1) https://nodejs.org/en/download/
  eth.mining
 
  personal.unlockAccount(eth.accounts[0], "123456789", 86400)    
-    
+ 
+ eth.getBalance(eth.accounts[0]);
+
 
 5. Run the **liteserver** development server (outside the development console) for front-end hot reloading.
 
     - Run the DAPP : ``npm run dev``
 
 The DAPP will serve the front-end on http://localhost:3000
+
+# MetaMask
+
+MetaMask is a bridge that allows you to visit the distributed web of tomorrow in your browser today. It allows you to run Ethereum dApps right in your browse. The fastest way to connect is through Chrome and MetaMask as described below.
+
+https://www.dcorp.it/chrome_and_metamask
+
+https://www.cryptocompare.com/wallets/guides/how-to-use-metamask/
+
+
