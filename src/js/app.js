@@ -6,9 +6,9 @@ App = {
         $.getJSON('../pets.json', function(data) {
             var petsRow = $('#petsRow');
             var petTemplate = $('#petTemplate');
-            var filtered = false;
+            petsRow.empty(); //empty the main products
             if(typeof filter!== undefined && filter !== ""){
-                petsRow.empty(); //empty the main products
+
 
                 //full match by product name
                 /*data = data.filter(function (i,n){
