@@ -1,22 +1,24 @@
 App = {
     web3Provider: null,
     contracts: {},
-
+    filter_adopters:[],
     petJson: function(filter){
         $.getJSON('../pets.json', function(data) {
             var petsRow = $('#petsRow');
             var petTemplate = $('#petTemplate');
             petsRow.empty(); //empty the main products
-            if(typeof filter!== undefined && filter !== ""){
+
+            if(typeof filter!== "undefined" && filter !== ""){
                 //full match by product name
                 /*data = data.filter(function (i,n){
                     return i.name === filter;
                 });*/
                 //partial match by product name
                 data = data.filter(function(x){ return x.name.toLowerCase().includes(filter.toLowerCase())})
-            }
 
+            }
             if(data.length > 0){
+                App.filter_adopters = data.map(function (t) { return t.id});
 
                 for (i = 0; i < data.length; i ++) {
                     petTemplate.find('.panel-title').text(data[i].name);
@@ -25,20 +27,16 @@ App = {
                     petTemplate.find('.pet-age').text(data[i].age);
                     petTemplate.find('.pet-location').text(data[i].location);
                     petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
-
                     petsRow.append(petTemplate.html());
-
-
                 }
             }
 
         });
-    },
-    init: function() {
-
-        App.petJson("");
 
         return App.initWeb3();
+    },
+    init: function() {
+        App.petJson("");
     },
 
     initWeb3: function() {
@@ -72,7 +70,6 @@ App = {
 
     bindEvents: function() {
         $(document).on('click', '.btn-adopt', App.handleAdopt);
-        $(document).on('keyup', '#myInput', App.filterSearch);
     },
 
     filterSearch:function(){
@@ -86,9 +83,12 @@ App = {
 
             return adoptionInstance.getAdopters.call();
         }).then(function(adopters) {
+            var filtered= adopters.map(function(item,index){ if(App.filter_adopters.indexOf(index) > -1) return adopters[index];  });
+            adopters = filtered.filter(function(n){ return n !== undefined; });
+
             for (i = 0; i < adopters.length; i++) {
                 if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-                    $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+                    $('.panel-pet').eq(i).find('button').text('Bought').attr('disabled', true);
                 }
             }
         }).catch(function(err) {
@@ -116,6 +116,7 @@ App = {
                 // Execute adopt as a transaction by sending account
                 return adoptionInstance.adopt(petId, {from: account});
             }).then(function(result) {
+
                 return App.markAdopted();
             }).catch(function(err) {
                 console.log(err.message);
@@ -128,5 +129,6 @@ App = {
 $(function() {
     $(window).load(function() {
         App.init();
+        $(document).on('keyup', '#myInput', App.filterSearch);
     });
 });
